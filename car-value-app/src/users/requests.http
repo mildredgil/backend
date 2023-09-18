@@ -1,0 +1,42 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email": "hello@app.com",
+  "password": "12345678"
+}
+
+### signin with existing user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "hello@app.com",
+  "password": "12345678"
+}
+
+### Sign out
+POST http://localhost:3000/auth/signout
+
+### Find a user
+GET http://localhost:3000/auth/whoami
+
+### Find a user
+GET http://localhost:3000/auth/8
+
+### Find all users with givel email
+GET http://localhost:3000/auth?email=hello@test.com
+
+### Update a user
+PATCH http://localhost:3000/auth/8
+content-type: application/json
+
+{
+    
+    "password": "qwerty"
+}
+
+### Delete a user
+DELETE http://localhost:3000/auth/7
+
